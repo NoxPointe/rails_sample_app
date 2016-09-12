@@ -10,4 +10,9 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", about_path
     assert_select "a[href=?]", contact_path
   end
+
+  test "contact page" do
+  	get signup_path
+  	assert_template 'users/new'
+  end
 end
